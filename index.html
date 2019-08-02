@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Parlez-vous anglais?</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, minimal-ui" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site__header island">
+  <div class="wrap">
+   <span id="animationSandbox" style="display: block;"><h1 class="site__title mega" id="box_text">Hello World!</h1></span>
+    <span class="beta subhead">Just-add-water translator</span>
+  </div>
+</header>
+
+<main class="site__content island" role="content">
+  <div class="wrap">
+    <form name="out">
+      <select class="input input--dropdown" name="in">
+        <optgroup label="Languages">
+          <option value="english">English</option>
+          <option value="spanish">Spanish</option>
+          <option value="italian">Italian</option>
+          <option value="german">German</option>
+          <option value="hindi">Hindi</option>
+          <option value="danish">Danish</option>
+        </optgroup>
+      </select>
+      <input class="butt" id="btn" type="button" value="Translate" onclick="go(document.out.in.options[document.out.in.selectedIndex].value)">
+    </form>
+    <hr />
+
+  </div>
+</main>
+     
+<script>
+        function go (x) {
+            
+            switch(x) {
+                case "english":
+                    document.getElementById("box_text").innerHTML = "Hello World!";
+                    break;                
+                case "spanish":
+                    document.getElementById("box_text").innerHTML = "Hola Mundo!";
+                    break;
+                case "italian":
+                    document.getElementById("box_text").innerHTML = "Ciao mondo!";
+                    break;
+                case "german":
+                    document.getElementById("box_text").innerHTML = "Hallo Welt!";
+                    break;
+                case "hindi":
+                    document.getElementById("box_text").innerHTML = "नमस्ते दुनिया!";
+                    break;
+                case "danish":
+                    document.getElementById("box_text").innerHTML = "Hej Verden!";
+                    break;
+            }
+        }
+    
+    </script>
+
+</body>
+</html>
